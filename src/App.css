@@ -1,38 +1,202 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  font-family: "open sans";
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#main-background {
+  height: 100vh;
+  width: 100vh;
+  padding: 5%;
+  background-repeat: no-repeat;
+  background-size: auto, auto, auto, cover;
+  background-blend-mode: color, multiply, normal, normal;
+  background-position: 0 0, 0 0, 0 0, center 20%;
+  background-image: linear-gradient(0deg, #ce022c, #ce022c),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.87), rgba(0, 0, 0, 0.87)),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)),
+    url("https://wallpapercave.com/wp/wp10342520.jpg");
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#main-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+#contest-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#contest-info-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+#contest-rules-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+#countdown-b {
+  font: var(font-style-normal) normal var(font-weight-900) var(font-size-14) /
+    18px var(font-family-proxima-nova);
+  color: var(color-ffffff);
+  text-align: left;
+  font: normal normal 900 14px/18px Proxima Nova;
+  letter-spacing: 2.8px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.p {
+  font: var(font-style-normal) normal var(font-weight-normal) var(font-size-14) /
+    18px var(font-family-proxima-nova);
+  color: var(color-ffffff);
+  text-align: left;
+  font: normal normal normal 14px/18px Proxima Nova;
+  letter-spacing: 2.8px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+#next-contest {
+  font: var(font-style-normal) normal var(font-weight-900) 16px/18px
+    var(font-family-proxima-nova);
+  text-align: left;
+  font: normal normal 900 16px/18px Proxima Nova;
+  letter-spacing: 1.6px;
+  color: #fd3560;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+#fan-text {
+  font: var(font-style-normal) normal var(font-weight-normal) var(font-size-18) /
+    var(line-spacing-24) var(font-family-proxima-nova);
+  letter-spacing: var(character-spacing-0);
+  color: var(color-ffffff);
+  text-align: left;
+  font: normal normal normal 18px/24px Proxima Nova;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.pepsi {
+  font: var(-style-normal) normal var(-weight-300) var(-size-18) /
+    var(--unnamed-line-spacing-32) var(-family-proxima-nova);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-ffffff);
+  text-align: left;
+  font: normal normal 300 18px/32px Proxima Nova;
+  letter-spacing: 0px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  height: 50px;
+}
+
+.pepsi-b {
+  color: #fd3560;
+  font-weight: bolder;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  display: inline-block;
+  line-height: 50px;
+}
+
+.pepsi-p {
+  color: white;
+  font-weight: bolder;
+  margin: 0;
+  padding: 0;
+  margin-left: 5px;
+  font-size: 20px;
+  display: inline-block;
+  line-height: 50px;
+}
+
+hr.desc {
+  width: 100%;
+  height: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fd3560;
+  border: 0 none;
+  opacity: 1;
+}
+
+.rules {
+  text-align: justify;
+  padding-left: 2%;
+  padding-right: 2%;
+  width: 20%;
+}
+
+.button {
+  background-color: #fd3560;
+  border: none;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 30px;
+}
+
+.button:hover {
+  background-color: white;
+  color: #fd3560;
+}
+
+.carousel-item {
+  background-color: white;
+  padding: 50px;
+  padding-bottom: 150px;
+}
+
+.container-fluid {
+  background-color: white;
+  padding: 2%;
+}
+
+.h3-prize {
+  color: #7e011c;
+  text-align: left;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.p-prize {
+  font: var(style-normal) normal bold 24px/26px var(family-proxima-nova);
+  letter-spacing: var(character-spacing-0);
+  color: var(color-000000);
+  text-align: left;
+  font: normal normal bold 24px/26px Proxima Nova;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+
+.carousel-indicators {
+  box-sizing: content-box;
+  flex: 0 1 auto;
+  width: 100px; /* change width */
+  height: 10px; /* change height */
+  padding: 0;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #fd3560;
+  background-clip: padding-box;
+  border: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  opacity: 0.5;
+  transition: opacity 0.6s ease;
 }
